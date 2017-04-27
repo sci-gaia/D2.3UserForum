@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/sci-gaia/D2.3UserForum.svg?branch=master)](https://travis-ci.org/sci-gaia/D2.3UserForum) 
+
 # D2.3UserForum
 
 Deliverable 2.3 - Outcomes of the Web-Based User Forum
