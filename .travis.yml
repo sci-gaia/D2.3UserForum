@@ -6,6 +6,8 @@ addons:
     packages:
     - pandoc
     - pandoc-citeproc
+    - aspell
+    - aspell-en
 before_install:
 install:
 script:
