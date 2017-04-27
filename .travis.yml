@@ -16,7 +16,7 @@ install:
 script:
   # - aspell -d en_GB -p .aspell.en.pws check D2.3-UF.md
   # This checks how many spelling errors were found
-  - ERRORS=`cat D2.3-UF.md | aspell -d en_GB -p .aspell.en.pws -a -c  |grep -v \* |uniq|grep -v "International Ispell Version" | wc -l
+  - cd $TRAVIS_BUILD_DIR ; ERRORS=`cat D2.3-UF.md | aspell -d en_GB -p .aspell.en.pws -a -c  |grep -v \* |uniq|grep -v "International Ispell Version"` | wc -l
   - echo "Found $ERRORS errors"
   - pandoc -N --variable mainfont="Lato" --variable sansfont="Lato" --variable monofont="Roboto" --variable fontsize=12pt --variable version=1.17.2 D2.3-UF.md  --toc -o D2.3-UF.odt
 after_success:
