@@ -1,9 +1,11 @@
+dist: trusty
+sudo: false
 language: c
 addons:
   apt:
     packages:
     - pandoc
-    # - pandoc-citeproc
+    - pandoc-citeproc
 before_install:
 install:
 script:
