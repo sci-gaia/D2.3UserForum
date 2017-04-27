@@ -11,8 +11,15 @@ install:
 script:
 - pandoc -N --variable mainfont="Lato" --variable sansfont="Lato" --variable monofont="Roboto"
   --variable fontsize=12pt --variable version=1.17.2 D2.3-UF.md  --toc -o D2.3-UF.odt
+after_success:
 notifications:
   slack:
     secure: SGRSdR90NTthc13ZOhfHF/ifkthjXtC88ItYqJMqNAU0kabTALzNTmtFbzj+OoKdeLPidfPnmAhunVclxKCx5sqAemMmfIpiCN1NrEsaZgg4LSj1FB+75Com3zRHT16k+T8KYAcSCRQ9alFbglD9vTM5rw/otAecUAkHgYzS7ym90CsZIE/KGy8owkQd7cIE7WHTduYNwGffgxnZesPrsoTGYuViBWhhh2cm6OCbVKvveh6l3ZwWn7zRItcwg21CeziQrr18L9+GHgElVvSTS2wanFHU3cYvtZC8Lt5B9GMc2eCbrDEILVKu6uqA5Kb0PlAvX/kojR8oU7psDe7jKHkyWMbdPLkqQ2ixyOBOj3jw2Ifzgq84Pd+yo7VD8uYnjoFxSeOwswY6liKsvpqSRnIaAX8w1Ma8we8CEg/8+yU06VX7L4hxWdHv2W2eOV/QZorflX6DcL7zodzgmOxkmzxf8x3WSah5epwBKugnpYlMXA6so254gncDapwu32T2Hm5IYsAYMDHtjlDx/mLyiSDEqTLbL3Oo4i1m2mIGjDEJvDnIHZ+ghdeYoP2tjl5+Q1Q/06M2b7wLpwJVivkHiyV33o7KFylpYSnqJ2IKJJLwp3ZsTHlpiQ/qwqgI/e0DkzbHQHc8TGG7kbR+eQO6bUAo48BFyc4E/GgMM4Unxvs=
-after_success:
 before_deploy:
+deploy:
+  provider: releases
+  api_key:
+    secure: PZl1iMqshI2fLEDBVoKY0R1U7wRH5fX3rbJhWKZCE4/Nn3XzyrHyAj09Oqf9K+1DPXYrN25FYOoMRrPbLN0CRwlwGnT/DNzKehW9rN9JFhCODHOh9cjQ2qvjGAp/IDGlq8sY+DqwkjMm9HkdZtCRb6gOvhxzO4LjD2GR/8nwbSqB6uI4oyBEG26qrZaQilvmsgtuUFOc+X6R25Nl5woIV4PobqsN9XIkVuT/nvQB5dWuRqAknnCrUWrd8gKK28IvW852lkSDX7vRg/y/t9SFIKNLV6SDifWtPY1f44bCz9+xxKe/pRZOFZGHj8gNf4ddFmJh5GYMXKjcxaAM1TdiaWl8KnnoNb90SDOj9tyJl2vZC9xh67bWsPpmk8gyd1KlHqWU5GeMQln+hYXTJGZao+8F6ipjps46f8SO59SHx0BLgeO8ELu2IVNhT3usJHlXeNsrCEmiCuisq2qIR+rFajZ0kr6b2w9Ew6+3EoEZRdAjKXtWLiHgNxXXCi86AIw4MwvpltZYYLrQw2nFnm2O38u1LIkak/sj5bEXSZ0zOC9FGqOlUv55WIcLwRRHiuqjzvXXcbtpbFSEqCHtgUaeo+8FEE/yr56xLrky4b7ITvGBgTM7rZnAcnljg9brfuuU/eV9PTHCRG9tbxlklu7P9iEh6M6vik1ptoU65bCb5hA=
+  file: D2.3-UF.odt
+  on:
+    repo: sci-gaia/D2.3UserForum
