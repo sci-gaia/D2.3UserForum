@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/sci-gaia/D2.3UserForum.svg?branch=master)](https://travis-ci.org/sci-gaia/D2.3UserForum) 
+[![Build Status](https://travis-ci.org/sci-gaia/D2.3UserForum.svg?branch=master)](https://travis-ci.org/sci-gaia/D2.3UserForum)
 
 # D2.3UserForum
 
@@ -16,3 +16,5 @@ The main file is : **D2.3-UF.md**. This is used to build the other formats (pdf,
 Use pandoc to create the document.
 
 `pandoc -N --variable mainfont="Lato" --variable sansfont="Lato" --variable monofont="Roboto" --variable fontsize=12pt --variable version=1.17.2 D2.3-UF.md  --toc -o D2.3-UF.odt`
+
+# Releases
