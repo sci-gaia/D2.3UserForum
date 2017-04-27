@@ -10,8 +10,7 @@ before_install:
 install:
 script:
   - aspell -d en_GB -p .aspell.en.pws check D2.3-UF.md
-  - pandoc -N --variable mainfont="Lato" --variable sansfont="Lato" --variable monofont="Roboto"
-  --variable fontsize=12pt --variable version=1.17.2 D2.3-UF.md  --toc -o D2.3-UF.odt
+  - pandoc -N --variable mainfont="Lato" --variable sansfont="Lato" --variable monofont="Roboto" --variable fontsize=12pt --variable version=1.17.2 D2.3-UF.md  --toc -o D2.3-UF.odt
 after_success:
 notifications:
   slack:
