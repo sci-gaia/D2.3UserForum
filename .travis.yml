@@ -9,6 +9,8 @@ addons:
     - aspell
     - aspell-en
     - inkscape
+    - texlive-latex-extra
+    - texlive-latex-recommended
 before_install:
 install:
 # before_script:
@@ -17,6 +19,7 @@ script:
   # - aspell -d en_GB -p .aspell.en.pws check D2.3-UF.md
   # This checks how many spelling errors were found
   - cd $TRAVIS_BUILD_DIR
+  - ls 
   - ERRORS=`cat D2.3-UF.md | aspell -d en_GB -p .aspell.en.pws -a -c  |grep -v \* |uniq|grep -v "International Ispell Version" | wc -l`
   - echo "Found $ERRORS errors"
   - pandoc -N \
