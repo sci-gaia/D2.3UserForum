@@ -9,7 +9,11 @@ addons:
     - aspell
     - aspell-en
     - inkscape
+    - texlive-latex-base
     - texlive-latex-extra
+    - texlive-fonts-recommended
+    - texlive-font-utils
+    - texlive-fonts-extra
     - texlive-latex-recommended
 before_install:
 install:
