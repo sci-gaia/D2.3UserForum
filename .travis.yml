@@ -38,7 +38,7 @@ script:
     --reference-odt=deliverable-template.ott \
     --number-sections \
     --from markdown+implicit_figures+table_captions+pipe_tables+footnotes \
-    D2.3-UF.md  --toc -o D2.3-UF.odt
+    D2.3-UF.md  --toc -o D2.3-UF.pdf 
 after_success:
 notifications:
   slack:
