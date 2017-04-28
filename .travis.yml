@@ -17,9 +17,15 @@ addons:
     - texlive-latex-recommended
     - fonts-lmodern
     - lmodern
-before_install:
-install:
-# before_script:
+    - python
+  pip:
+    - pandoc-fignos
+#before_install:
+# install:
+#   - git clone https://github.com/tomduck/pandoc-fignos
+#   - cd pandoc-fignos
+#   - python setup.py install
+before_script:
   - cd images ; bash convert-images.sh
 script:
   # - aspell -d en_GB -p .aspell.en.pws check D2.3-UF.md
@@ -29,7 +35,7 @@ script:
   - ERRORS=`cat D2.3-UF.md | aspell -d en_GB -p .aspell.en.pws -a -c  |grep -v \* |uniq|grep -v "International Ispell Version" | wc -l`
   - echo "Found $ERRORS errors"
   - >
-      pandoc -N
+      pandoc -S --filter pandoc-fignos
       --variable mainfont="Lato"
       --variable sansfont="Lato"
       --variable monofont="Roboto"
@@ -41,7 +47,7 @@ script:
       --from markdown+implicit_figures+table_captions+pipe_tables+footnotes+inline_notes
       D2.3-UF.md  -o D2.3-UF.odt
   - >
-      pandoc -N
+      pandoc -S --filter pandoc-fignos
       --variable mainfont="Lato"
       --variable sansfont="Lato"
       --variable monofont="Roboto"
