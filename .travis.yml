@@ -18,9 +18,8 @@ addons:
     - fonts-lmodern
     - lmodern
     - python
-  pip:
-    - pandoc-fignos
-#before_install:
+before_install:
+  - sudo pip install pandoc-fignos
 # install:
 #   - git clone https://github.com/tomduck/pandoc-fignos
 #   - cd pandoc-fignos
