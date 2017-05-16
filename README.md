@@ -22,7 +22,21 @@ The document is built automatically on [Travis](https://travis-ci.org/sci-gaia/D
 
 We use pandoc to create the document :
 
-`pandoc -N --variable mainfont="Lato" --variable sansfont="Lato" --variable monofont="Roboto" --variable fontsize=12pt --variable version=1.17.2 D2.3-UF.md  --toc -o D2.3-UF.odt`
+```
+pandoc -S --filter pandoc-fignos \
+--variable mainfont="Lato" \
+--variable sansfont="Lato" \
+--variable monofont="Roboto" \
+--variable fontsize=12pt \
+--variable version=1.17.2 \
+--reference-odt="deliverable-template.ott" \
+--number-sections \
+--toc \
+--from markdown+implicit_figures+table_captions+pipe_tables+footnotes+inline_notes \
+D2.3-UF.md  -o D2.3-UF.odt
+```
+
+You will need the filters available in your distribution of pandoc.
 
 #  Spell checking
 
@@ -30,3 +44,5 @@ We use aspell to
 `cat D2.3-UF.md  | aspell --pipe --encoding utf-8|grep -v \* | uniq`
 
 # Releases
+
+Versions are considered internal unless they have a major version number (_e.g._ `v1.0.0`). 
