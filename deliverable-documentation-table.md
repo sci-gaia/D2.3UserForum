@@ -3,7 +3,7 @@
 | Number | Deliverable D2.3 |
 | Title | Sci-GaIA Deliverable 2.3 : Outcomes of the Web-Based User Forum |
 | Related WP | WP2 |
-| Related Task | Task  2.1 |
+| Related Task | Task 2.1 |
 | Lead Beneficiary | CSIR |
 | Author(s) | Bruce Becker (CSIR) |
 | Contributor(s) | Roberto Barbera (University of Catania) |
