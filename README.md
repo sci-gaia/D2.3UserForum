@@ -24,6 +24,7 @@ We use pandoc to create the document :
 
 ```
 pandoc -S --filter pandoc-fignos \
+--filter --filter pandoc-tablenos \
 --variable mainfont="Lato" \
 --variable sansfont="Lato" \
 --variable monofont="Roboto" \
@@ -45,4 +46,4 @@ We use aspell to
 
 # Releases
 
-Versions are considered internal unless they have a major version number (_e.g._ `v1.0.0`). 
+Versions are considered internal unless they have a major version number (_e.g._ `v1.0.0`).
