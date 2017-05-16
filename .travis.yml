@@ -35,6 +35,7 @@ script:
   - echo "Found $ERRORS errors"
   - >
       pandoc -S --filter pandoc-fignos
+      --filter pandoc-tablenos
       --variable mainfont="Lato"
       --variable sansfont="Lato"
       --variable monofont="Roboto"
@@ -47,6 +48,7 @@ script:
       D2.3-UF.md  -o D2.3-UF.odt
   - >
       pandoc -S --filter pandoc-fignos
+      --filter pandoc-tablenos
       --variable mainfont="Lato"
       --variable sansfont="Lato"
       --variable monofont="Roboto"
