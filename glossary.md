@@ -12,3 +12,5 @@
 | REST | Representational State Transfer - a standard vocabulary for interacting with remote services |
 | WIMEA-ICT | Weather Information Management in East Africa - research community |
 | VPN | Virtual Private Network - network technology |
+| Slack | |
+| | |
