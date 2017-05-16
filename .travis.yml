@@ -34,16 +34,16 @@ script:
   - ERRORS=`cat D2.3-UF.md | aspell -d en_GB -p .aspell.en.pws -a -c  |grep -v \* |uniq|grep -v "International Ispell Version" | wc -l`
   - echo "Found $ERRORS errors"
   - >
-      pandoc -S --filter pandoc-fignos \
-      --variable mainfont="Lato" \
-      --variable sansfont="Lato" \
-      --variable monofont="Roboto" \
-      --variable fontsize=12pt \
-      --variable version=1.17.2 \
-      --reference-odt="deliverable-template.ott" \
-      --number-sections \
-      --toc \
-      --from markdown+implicit_figures+table_captions+pipe_tables+footnotes+inline_notes \
+      pandoc -S --filter pandoc-fignos
+      --variable mainfont="Lato"
+      --variable sansfont="Lato"
+      --variable monofont="Roboto"
+      --variable fontsize=12pt
+      --variable version=1.17.2
+      --reference-odt="deliverable-template.ott"
+      --number-sections
+      --toc
+      --from markdown+implicit_figures+table_captions+pipe_tables+footnotes+inline_notes 
       D2.3-UF.md  -o D2.3-UF.odt
   - >
       pandoc -S --filter pandoc-fignos
