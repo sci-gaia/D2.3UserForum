@@ -19,7 +19,7 @@ addons:
     - lmodern
     - python
 before_install:
-  - sudo pip install pandoc-fignos
+  - sudo pip install pandoc-fignos pandoc-tablenos
 # install:
 #   - git clone https://github.com/tomduck/pandoc-fignos
 #   - cd pandoc-fignos
