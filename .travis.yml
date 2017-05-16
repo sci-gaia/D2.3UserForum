@@ -43,7 +43,7 @@ script:
       --reference-odt="deliverable-template.ott"
       --number-sections
       --toc
-      --from markdown+implicit_figures+table_captions+pipe_tables+footnotes+inline_notes 
+      --from markdown+implicit_figures+table_captions+pipe_tables+footnotes+inline_notes
       D2.3-UF.md  -o D2.3-UF.odt
   - >
       pandoc -S --filter pandoc-fignos
@@ -72,3 +72,4 @@ deploy:
     - "D2.3-UF.pdf"
   on:
     repo: sci-gaia/D2.3UserForum
+    tags: true
