@@ -1,6 +1,7 @@
 | Acronym | Definition |
 |:---------------|:----------------|
 | AAROC | Africa-Arabia Regional Operations Centre - supporting initiative |
+| AOSP | African Open Science Platform - recent Open Science inititative supported by the South African Academy of Sciences |
 | API | Application Programming Interface - typically a means for expressing the means for interacting with a remote service or application |
 | Bootcamp | A brief, focussed event with a development focus around a particular issue or technology. Particularly suited to creating an initial spike in activity or completing a project activity or application |
 | DARIAH | Digital Research Infrastructure for the Arts and Humanities - community of practice |
