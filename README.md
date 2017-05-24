@@ -46,4 +46,6 @@ We use aspell to
 
 # Releases
 
-Versions are considered internal unless they have a major version number (_e.g._ `v1.0.0`).
+* **Major versions** _e.g._ `v1.0.0` : Public versions, passed internal review and checking.
+* **Minor versions** _e.g._ `v0.1.0` : Internal releases, awaiting review
+* **Patch versions** _e.g._ `v0.0.1` : Work in progress tags.
