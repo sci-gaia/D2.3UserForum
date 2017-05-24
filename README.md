@@ -41,7 +41,8 @@ You will need the filters available in your distribution of pandoc.
 
 #  Spell checking
 
-We use aspell to
+We use aspell to check the spelling of the document against a dictionary of terms which we maintain in the repo (`.aspell.en.pws`) :
+
 `cat D2.3-UF.md  | aspell --pipe --encoding utf-8|grep -v \* | uniq`
 
 # Releases
